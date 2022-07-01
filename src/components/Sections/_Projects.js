@@ -1,15 +1,14 @@
-import React from 'react';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react";
+import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
 
-import Button from 'components/UI/Button';
-import { workContent } from 'config/projects';
+import { workContent } from "config/projects";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // padding: '50px 0',
+    padding: "50px 0",
   },
   colorPrimary: {
     color: theme.palette.primary.main,
@@ -18,27 +17,34 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.white,
   },
   title: {
-    textAlign: 'center',
-    margin: '35px 0 10px 0',
+    textAlign: "center",
+    margin: "35px 0 10px 0",
   },
   img: {
-    width: '100%',
+    borderRadius: "6px 6px 0 0",
+    width: "100%",
+    minHeight: "160px",
   },
   card: {
-    margin: '7 0 4 0',
+    margin: "7 0 4 0",
+    minHeight: "468px",
     paddingBottom: 1,
-    transition: '0.2s',
-    '&:hover': {
-      transition: '0.2s',
-      transform: 'scale(1.05)',
-      boxShadow: '0 5px 20px rgba(100, 60, 17, 0.39)',
+    borderRadius: "6px",
+    transition: "0.2s",
+    border: `${theme.palette.primary.main} 1px solid`,
+    "&:hover": {
+      transition: "0.2s",
+      transform: "scale(1.05)",
+      boxShadow: `0px 0px 13px 3px #ba781c`,
+      border: "none",
+      borderRadius: "6px",
     },
   },
   center: {
-    height: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
 }));
 
@@ -58,23 +64,48 @@ const Projects = () => {
         <Grid item xs={12}>
           <Grid container justify="center">
             {workContent.map((item, index) => (
-              <Box component={Grid} padding={2}  item xs={12} sm={6} md={4} key={index}>
+              <Box
+                component={Grid}
+                padding={2.5}
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                key={index}
+              >
                 <div className={classes.card}>
-                  <img src={item.img} alt={item.title} className={classes.img} />
-                  <Box marginX={2} marginY={2}>
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className={classes.img}
+                  />
+                  <Box marginX={3} marginY={3} minHeight="200px">
                     <Typography variant="h5" className={classes.colorPrimary}>
                       <strong>{item.title}</strong>
                     </Typography>
                     <Box marginY={2}>
-                      <Typography variant="body1" className={classes.colorWhite}>
+                      <Typography
+                        variant="body1"
+                        className={classes.colorWhite}
+                      >
                         {item.desc}
                       </Typography>
                     </Box>
-                    <Box display="flex" justifyContent="flex-end" marginTop={1}>
-                      <a href={item.href} target="_blank" rel="noopener noreferrer" className={classes.colorPrimary}>
-                        <Button>Learn More</Button>
-                      </a>
-                    </Box>
+                  </Box>
+                  <Box
+                    display="flex"
+                    justifyContent="flex-end"
+                    marginTop={5}
+                    marginX={3}
+                  >
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={classes.colorPrimary}
+                    >
+                      Learn More
+                    </a>
                   </Box>
                 </div>
               </Box>

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import Box from '@material-ui/core/Box';
-import Fade from '@material-ui/core/Fade';
-import Slide from '@material-ui/core/Slide';
-import Snackbar from '@material-ui/core/Snackbar';
-import SnackbarContent from '@material-ui/core/SnackbarContent';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState } from "react";
+import Box from "@material-ui/core/Box";
+import Fade from "@material-ui/core/Fade";
+import Slide from "@material-ui/core/Slide";
+import Snackbar from "@material-ui/core/Snackbar";
+import SnackbarContent from "@material-ui/core/SnackbarContent";
+import { makeStyles } from "@material-ui/core/styles";
 
-import Button from 'components/UI/Button';
+import Button from "components/UI/Button";
 
 function SlideTransition(props) {
   return <Slide {...props} direction="left" />;
@@ -14,8 +14,11 @@ function SlideTransition(props) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: theme.palette.background.main,
-    height: 'auto',
+    // background: theme.palette.background.darkPrimary,
+    background: "#0e0f0f",
+    border: `solid 1px ${theme.palette.primary.main}`,
+    color: theme.palette.primary.main,
+    height: "auto",
   },
 }));
 
@@ -48,7 +51,7 @@ export default function TransitionsSnackbar() {
         onClose={handleClose}
         TransitionComponent={state.Transition}
         key={state.Transition.name}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
       >
         <SnackbarContent
           className={classes.root}
@@ -59,19 +62,19 @@ export default function TransitionsSnackbar() {
               <Box paddingX="10px">
                 <Box fontSize="20px">(\__/)</Box>
                 <Box fontSize="20px">
-                  ({' '}
+                  ({" "}
                   <Box component="span" fontSize="15px">
                     ^
-                  </Box>{' '}
-                  -{' '}
+                  </Box>{" "}
+                  -{" "}
                   <Box component="span" fontSize="15px">
                     ^
                   </Box>
                   )<Box component="span" fontSize="15px"></Box>
                 </Box>
                 <Box fontSize="20px">
-                  {' '}
-                  &nbsp;{'/>'}{' '}
+                  {" "}
+                  &nbsp;{"/>"}{" "}
                   <Box component="span" fontSize="20px">
                     ['🍎','🍐','🍊']
                   </Box>

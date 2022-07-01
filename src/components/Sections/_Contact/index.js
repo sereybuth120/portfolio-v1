@@ -58,7 +58,7 @@ export default function Contact() {
               <strong className={classes.colorWhite}> Talk</strong>
             </Typography>
             <Typography variant="body1" className={classes.colorWhite}>
-              Got any questions? Fell free to reach out 📬
+              Got any questions? Feel free to reach out 📬
             </Typography>
           </Box>
           <Box className={classes.social}>

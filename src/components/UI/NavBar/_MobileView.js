@@ -1,42 +1,49 @@
-import React, { useState } from 'react';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Collapse from '@material-ui/core/Collapse';
-import IconButton from '@material-ui/core/IconButton';
-import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState } from "react";
+import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Collapse from "@material-ui/core/Collapse";
+import IconButton from "@material-ui/core/IconButton";
+import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
+import { makeStyles } from "@material-ui/core/styles";
 
-import { useLinkStyles } from 'components/UI/Link/Link';
+import { useLinkStyles } from "components/UI/Link/Link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   toolbar: {
-    display: 'flex',
-    alignItems: 'center',
+    display: "flex",
+    alignItems: "center",
     background: theme.palette.primary.dark,
   },
   menuButton: {
-    float: 'right',
+    float: "right",
   },
   logo: {
-    width: '119px',
+    width: "119px",
   },
   nav: {
-    color: '#fff',
-    padding: '10px 0',
+    color: "#fff",
+    padding: "10px 0",
+    display: "flex",
+    width: "100%",
+    justifyContent: "center",
+    textAlign: "center",
   },
   navMenu: {
     fontWeight: 700,
-    fontSize: '13px',
-    display: 'flex',
-    justifyContent: 'space-around',
+    fontSize: "13px",
+    display: "flex",
+    flexDirection: "column",
   },
   navMenuItem: {
-    '&:hover': {
+    display: "flex",
+    flexDirection: "column",
+    padding: "10px 0",
+    "&:hover": {
       color: theme.palette.primary.main,
     },
   },
@@ -46,6 +53,7 @@ const MobileNavView = ({ selectedElements, scrollSmoothHandler }) => {
   const classes = useStyles();
   const linkClasses = useLinkStyles();
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <AppBar position="sticky" className={classes.root}>
       <Toolbar className={classes.toolbar}>
@@ -55,8 +63,15 @@ const MobileNavView = ({ selectedElements, scrollSmoothHandler }) => {
           </Grid>
           <Grid item xs={9} md={9}>
             <Box>
-              <IconButton className={classes.menuButton} color="inherit" aria-label="open drawer">
-                <MenuOutlinedIcon color="primary" onClick={() => setIsOpen(!isOpen)} />
+              <IconButton
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="open drawer"
+              >
+                <MenuOutlinedIcon
+                  color="primary"
+                  onClick={() => setIsOpen(!isOpen)}
+                />
               </IconButton>
             </Box>
           </Grid>
@@ -66,8 +81,15 @@ const MobileNavView = ({ selectedElements, scrollSmoothHandler }) => {
               <nav className={classes.nav}>
                 <div className={classes.navMenu}>
                   {selectedElements.map((item, i) => (
-                    <div key={i} className={classes.navMenuItem}>
-                      <span onClick={scrollSmoothHandler(i)} className={linkClasses.noUnderlineOnHover}>
+                    <div
+                      key={i}
+                      className={classes.navMenuItem}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <span
+                        onClick={scrollSmoothHandler(i)}
+                        className={linkClasses.noUnderlineOnHover}
+                      >
                         {item.label}
                       </span>
                     </div>

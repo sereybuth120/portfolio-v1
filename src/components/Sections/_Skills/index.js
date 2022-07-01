@@ -29,7 +29,7 @@ export default function Skills() {
         <Typography variant="h4" className={classes.title}>
           <strong>
             <span className={classes.colorWhite}>Professional</span>{' '}
-            <span className={classes.colorPrimary}>Skillset</span>
+            <span className={classes.colorPrimary}>Skills Set</span>
           </strong>
         </Typography>
       </Grid>
@@ -39,7 +39,7 @@ export default function Skills() {
       <Grid item xs={12}>
         <Typography variant="h4" className={classes.title}>
           <strong>
-            <span className={classes.colorWhite}>Other</span> <span className={classes.colorPrimary}>Skillset</span>
+            <span className={classes.colorWhite}>Other</span> <span className={classes.colorPrimary}>Skills Set</span>
           </strong>
         </Typography>
       </Grid>

@@ -50,12 +50,12 @@ const About = () => {
         </Typography>
         <Box paddingTop={5} paddingRight={5}>
           <Typography variant="body1" className={classes.colorWhite} gutterBottom paragraph>
-            A little bit about my self, Im <span className={classes.colorPrimary}> 21</span> a year olds kid who moved
+            A little bit about my self, Im <span className={classes.colorPrimary}> 22</span> a year olds geeks who moved
             from <span className={classes.colorPrimary}> Battambang</span> to the big city to find a better opportunity
-            for my self. I'm Currently a senior at
+            for my self. I'm a fresh graduate from
             <span className={classes.colorPrimary}> Royal University of Phnom Penh</span> majoring in{' '}
-            <span className={classes.colorPrimary}> Computer Sentence</span>. And right now Im working as a junior{' '}
-            <span className={classes.colorPrimary}>Associate Software Engineer</span>.
+            <span className={classes.colorPrimary}> Computer Sentence</span>. And right now Im working as a{' '}
+            <span className={classes.colorPrimary}>Web Developer</span>.
             <br />
             Also a big fan of Star Wars and Anime XD
           </Typography>
