@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Box from "@material-ui/core/Box";
 import Fade from "@material-ui/core/Fade";
 import Slide from "@material-ui/core/Slide";
 import Snackbar from "@material-ui/core/Snackbar";
@@ -14,7 +13,6 @@ function SlideTransition(props) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // background: theme.palette.background.darkPrimary,
     background: "#0e0f0f",
     border: `solid 1px ${theme.palette.primary.main}`,
     color: theme.palette.primary.main,
@@ -57,7 +55,7 @@ export default function TransitionsSnackbar() {
           className={classes.root}
           message={
             <>
-              <div>Thank you for contacting. I'll get back to you ASAP</div>
+              {/* <div>Thank you for contacting. I'll get back to you ASAP</div>
               <div>In the mean time here some fruits to enjoy</div>
               <Box paddingX="10px">
                 <Box fontSize="20px">(\__/)</Box>
@@ -79,7 +77,8 @@ export default function TransitionsSnackbar() {
                     ['🍎','🍐','🍊']
                   </Box>
                 </Box>
-              </Box>
+              </Box> */}
+              Something went wrong
             </>
           }
         />

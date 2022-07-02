@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "35px 0 10px 0",
   },
   img: {
-    borderRadius: "6px 6px 0 0",
+    borderRadius: "4px 4px 0 0",
     width: "100%",
     minHeight: "160px",
   },
@@ -57,7 +57,7 @@ const Projects = () => {
           <Typography variant="h4" className={classes.title}>
             <strong>
               <span className={classes.colorPrimary}>Project </span>
-              <span className={classes.colorWhite}>I been a part of </span>
+              <span className={classes.colorWhite}>I been part of </span>
             </strong>
           </Typography>
         </Grid>
@@ -66,7 +66,8 @@ const Projects = () => {
             {workContent.map((item, index) => (
               <Box
                 component={Grid}
-                padding={2.5}
+                paddingX={{ xs: 1, lg: 2.5 }}
+                paddingY={{ xs: 2.5, lg: 2.5 }}
                 item
                 xs={12}
                 sm={6}

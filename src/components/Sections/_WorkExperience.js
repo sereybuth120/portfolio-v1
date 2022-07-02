@@ -10,7 +10,7 @@ import { workExperienceContent, educationContent } from "config/experience";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    padding: "20px 0",
+    padding: "50px 0",
   },
   colorPrimary: {
     color: theme.palette.primary.main,

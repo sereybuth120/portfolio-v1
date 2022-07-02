@@ -69,7 +69,7 @@ const DesktopNav = ({ selectedElements, scrollSmoothHandler }) => {
       <Toolbar className={classes.toolbar}>
         <Container maxWidth="lg">
           <Box display="flex" alignItems="center">
-            <Tooltip title="Honestly, I cant't decide on which logo to use. So, YEAS.....">
+            <Tooltip title="Honestly, I can't decide on which logo to use. So yeah...">
               <div className={classes.logoWrapper}>LOGO</div>
             </Tooltip>
             <Box className={classes.navWrapper}>
