@@ -56,7 +56,7 @@ const Projects = () => {
         <Grid xs={12} className={classes.container}>
           <Typography variant="h4" className={classes.title}>
             <strong>
-              <span className={classes.colorPrimary}>Project </span>
+              <span className={classes.colorPrimary}>Projects </span>
               <span className={classes.colorWhite}>I've been part of </span>
             </strong>
           </Typography>
