@@ -57,7 +57,7 @@ const Projects = () => {
           <Typography variant="h4" className={classes.title}>
             <strong>
               <span className={classes.colorPrimary}>Project </span>
-              <span className={classes.colorWhite}>I been part of </span>
+              <span className={classes.colorWhite}>I've been part of </span>
             </strong>
           </Typography>
         </Grid>
