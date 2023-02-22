@@ -29,10 +29,14 @@ const useStyles = makeStyles((theme) => ({
 
 const About = () => {
   const classes = useStyles();
+
   function getJoke() {
     const index = Math.floor(Math.random() * JOKES.length);
     return JOKES[index];
   }
+
+  const date = new Date();
+  const year2digits = date.getFullYear().toString().substring(2);
 
   return (
     <Box component={Grid} container paddingX={{ sm: 2, md: 4 }}>
@@ -85,19 +89,18 @@ const About = () => {
             gutterBottom
             paragraph
           >
-            A little bit about my self, Im{" "}
-            <span className={classes.colorPrimary}> 22</span> a year olds geeks
-            who moved from{" "}
+            A little bit about my self, Im
+            <span className={classes.colorPrimary}> {year2digits}</span> a year
+            olds geeks who moved from
             <span className={classes.colorPrimary}> Battambang</span> to the big
             city to find a better opportunity for my self. I'm a fresh graduate
             from
             <span className={classes.colorPrimary}>
-              {" "}
-              Royal University of Phnom Penh
-            </span>{" "}
-            majoring in{" "}
+              {` Royal University of PhnomPenh `}
+            </span>
+            majoring in
             <span className={classes.colorPrimary}> Computer Sentence</span>.
-            And right now Im working as a{" "}
+            {` And right now Im working as a `}
             <span className={classes.colorPrimary}>Web Developer</span>.
             <br />
             Also a big fan of Star Wars and Anime XD
